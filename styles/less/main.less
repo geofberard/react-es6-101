@@ -1,0 +1,76 @@
+body{
+    background:#eeeeee !important
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+    min-height: 65px;
+    background-color: #0067b1;
+
+    .navbar-brand{
+        font-size:26px;
+        color: #fff;
+        line-height: 34px;
+    }
+
+    .navbar-logo{
+        width: 100px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+    }
+
+    .navbar-header small {
+        padding-top: 3px;
+        display: block;
+        font-size: 18px;
+    }
+}
+
+.question-list {
+    padding-top: 65px;
+    padding-bottom: 50em;
+}
+
+.card{
+    overflow:hidden;
+    margin: 30px auto;
+    padding:20px;
+
+    color:#000000;
+    background-color:#ffffff !important;
+    transition: all 0.3s ease-in-out;
+    border-radius:2px;
+
+    cursor: pointer;
+
+    &.active {
+        box-shadow: 0 12px 24px rgba(0,0,0,0.22), 0 8px 8px rgba(0,0,0,0.23);
+        width: 95%;
+
+        .card-content{
+            font-size:24px;
+        }
+    }
+
+    &.active ~ .card.active{
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        width: 87%;
+
+        .card-content{
+            font-size:12px;
+        }
+    }
+
+    &.inactive{
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        width: 87%;
+        opacity: 0.5;
+        background: #CCC;
+    }
+
+    .card-content{
+        transition: font 0.3s ease;
+    }
+
+}

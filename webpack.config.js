@@ -17,6 +17,10 @@ module.exports = {
                 query: {
                     presets: ['es2015','react']
                 }
+            },
+            {
+                test: /\.less$/,
+                loader: "style-loader!css-loader!autoprefixer-loader!less-loader"
             }
         ]
     }
