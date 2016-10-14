@@ -1,5 +1,8 @@
 module.exports = {
-    entry: "./app/main.js",
+    entry: [
+        "./app/main.js",
+        "./styles/less/main.less"
+    ],
     output: {
         path: __dirname + "/",
         filename: "index.js"
@@ -17,6 +20,10 @@ module.exports = {
                 query: {
                     presets: ['es2015','react']
                 }
+            },
+            {
+                test: /\.less$/,
+                loader: "style-loader!css-loader!autoprefixer-loader!less-loader"
             }
         ]
     }
